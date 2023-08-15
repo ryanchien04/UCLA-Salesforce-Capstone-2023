@@ -1,6 +1,4 @@
-import pandas as pd
-import pyarrow.parquet as pq
-from datasets import Dataset, load_dataset
+from datasets import load_dataset
 from transformers import AutoTokenizer
 
 # Load the dataset as an iterable so that it can be streamed
