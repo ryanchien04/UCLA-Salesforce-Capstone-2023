@@ -12,8 +12,9 @@ item = next(iter(ds))
 # output row
 print(item["content"])
 
-# This line iterates over the whole datset, 
+# This loop iterates over the whole datset
 for row in iter(ds):
+    # perturb row and check against ground truth
     print(row["content"])
     break
 
