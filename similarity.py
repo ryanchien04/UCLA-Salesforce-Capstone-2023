@@ -1,6 +1,7 @@
 from Levenshtein import distance
 
 assert(distance('kitten', 'sitting') == 3)
+assert(distance('sitting', 'sitting') == 0)
 
 def exact_match_accuracy(reference, hypothesis):
   """Calculates the exact match accuracy between two sequences.
@@ -23,3 +24,7 @@ def exact_match_accuracy(reference, hypothesis):
   precision = matches / (matches + (len(reference) - len(hypothesis)) / len(hypothesis))
 
   return precision
+
+assert(exact_match_accuracy('kitten', 'sitting') == 0)
+assert(exact_match_accuracy('sitting', 'sitting') == 1)
+print(exact_match_accuracy('sitting on a tree', 'sitting'))
